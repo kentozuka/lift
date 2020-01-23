@@ -8,7 +8,7 @@
       liffId: "1653770270-Jk1N1OPe"
     }, 
     data => {
-      document.getElementById('liff').innerHTML = data
+      document.getElementById('liff').innerHTML = JSON.stringify(data)
       console.log(data)
     },
     err => {
