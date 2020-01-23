@@ -2,12 +2,13 @@ liff.init({ liffId: '1653770270-Jk1N1OPe' })
   .then(() => {
     liff.getProfile()
       .then(profile => {
-        document.getElementById('liff').innerText = JSON.stringify(profile)
-        console.log(profile)
+        const fullname = profile.displayName;
+        const name = fullname.match(' ') ? fullname.split(' ')[0] : fullname;
+        document.getElementById('username').innerText = name;
+        document.getElementById('user-profile-id').src = profile.pictureUrl;
       })
       .catch((err) => { console.log('error', err) })
   })
-  .catch((err, LiffError) => {
-    // Error happens during initialization
+  .catch((err) => {
     console.log(err.code, err.message)
     })
