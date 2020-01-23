@@ -1,5 +1,4 @@
 import { store } from '../src/store/index'
-
 liff.init({ liffId: '1653770270-Jk1N1OPe' })
   .then(() => {
     liff.getProfile()
